@@ -1,24 +1,23 @@
 package com.api.res;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
 
-@XmlRootElement
 @Data
 public class Table11Rs {
     
-    @XmlElement
-    private String Account;
-    
-    @XmlElement
-    private String ApplyDate;
-    
-    @XmlElement
-    private String AuditStatus;
-    
-    @XmlElement
-    private String Note;
+    @JsonProperty("Account")
+    private String account;
+
+    @JsonProperty("ApplyDate")
+    private String applyDate;
+
+    @JsonProperty("AuditStatus")
+    private String auditStatus;
+
+    @JsonProperty("Note")
+    private String note;
+
     
 }
