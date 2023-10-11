@@ -7,6 +7,8 @@ logging:
   level:
     root: DEBUG
     org.springframework: DEBUG
+  file:
+    path: C:/tmp
 info:
   demo:
     val1: demoVal1
