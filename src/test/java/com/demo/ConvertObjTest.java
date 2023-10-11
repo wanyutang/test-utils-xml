@@ -29,7 +29,7 @@ public class ConvertObjTest {
     @Test
     public void xmlConvertObj() throws IOException {
         TypeReference<Table11Rs> typeReference = new TypeReference<Table11Rs>() {};
-        String filePath = "./src/main/resources/xml-sample1.txt";
+        String filePath = "./src/main/resources/xml-sample3.txt";
         String fileContent = Files.lines(Paths.get(filePath)).collect(Collectors.joining());
         Table11Rs rs = XmlUtil.xmlStringToObject(fileContent, typeReference);
         log.debug("log res getAccount: {}", rs.toString());
