@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<diffgr:diffgram xmlns="http://tempuri.org/" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<NewDataSet xmlns="">
+<Table1 diffgr:id="Table11" msdata:rowOrder="0">
+<Account>777200028951</Account><ApplyDate>0112/03/22</ApplyDate><AuditStatus>D</AuditStatus><Note>任職公司與職業別不符_</Note></Table1>
+<Table1 diffgr:id="Table12" msdata:rowOrder="1"><Account>777970012511</Account><ApplyDate>0112/03/22</ApplyDate>
+<AuditStatus>D</AuditStatus><Note>任職公司與職業別不符_</Note></Table1></NewDataSet></diffgr:diffgram>
