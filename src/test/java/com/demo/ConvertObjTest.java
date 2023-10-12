@@ -28,10 +28,9 @@ public class ConvertObjTest {
 
     @Test
     public void xmlConvertObjTable1() throws IOException {
-        TypeReference<Table11> typeReference = new TypeReference<Table11>() {};
         String filePath = "./src/main/resources/xml-sample-Table1.txt";
         String fileContent = Files.lines(Paths.get(filePath)).collect(Collectors.joining());
-        Table11 rs = XmlUtil.xmlStringToObject(fileContent, typeReference);
+        Table11 rs = XmlUtil.xmlToObject(fileContent, Table11.class);
         log.debug("log res getAccount: {}", rs.toString());
     }
 
@@ -39,8 +38,7 @@ public class ConvertObjTest {
     public void QryEditItemNewDataSet() throws IOException {
         String filePath = "./src/main/resources/xml-sample2.txt";
         String fileContent = Files.lines(Paths.get(filePath)).collect(Collectors.joining());
-        Diffgr<QryEditItemNewDataSet> diffgr = new Diffgr<QryEditItemNewDataSet>();
-        diffgr = XmlUtil.jsonToObject(fileContent, Diffgr.class);
+        Diffgr<?> diffgr = XmlUtil.xmlToObject(fileContent, Diffgr.class);
         log.debug("log res : {}", diffgr.getNewDataSet());
     }
 
