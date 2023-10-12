@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Table1>
-    <Account>777200028951</Account>
-    <ApplyDate>0112/03/22</ApplyDate>
-    <AuditStatus>D</AuditStatus>
-    <Note>任職公司與職業別不符_</Note>
-</Table1>
+<NewDataSet>
+    <Table1>
+        <Account>777200028951</Account>
+        <ApplyDate>0112/03/22</ApplyDate>
+        <AuditStatus>D</AuditStatus>
+        <Note>任職公司與職業別不符_</Note>
+    </Table1>
+    <Table1>
+        <Account>777970012511</Account>
+        <ApplyDate>0112/03/22</ApplyDate>
+        <AuditStatus>D</AuditStatus>
+        <Note>任職公司與職業別不符_</Note>
+    </Table1>
+</NewDataSet>

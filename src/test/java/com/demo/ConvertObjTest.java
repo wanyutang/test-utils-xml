@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Collectors;
 
+import com.api.res.NewDataSet;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -25,14 +26,23 @@ public class ConvertObjTest {
         log.debug("log res: {}", fileContent);
     }
 
-    
     @Test
-    public void xmlConvertObj() throws IOException {
+    public void xmlConvertObjTable1() throws IOException {
         TypeReference<Table11Rs> typeReference = new TypeReference<Table11Rs>() {};
-        String filePath = "./src/main/resources/xml-sample3.txt";
+        String filePath = "./src/main/resources/xml-sample-Table1.txt";
         String fileContent = Files.lines(Paths.get(filePath)).collect(Collectors.joining());
         Table11Rs rs = XmlUtil.xmlStringToObject(fileContent, typeReference);
         log.debug("log res getAccount: {}", rs.toString());
+    }
+
+    
+    @Test
+    public void xmlConvertObj() throws IOException {
+        TypeReference<NewDataSet> typeReference = new TypeReference<NewDataSet>() {};
+        String filePath = "./src/main/resources/xml-sample3.txt";
+        String fileContent = Files.lines(Paths.get(filePath)).collect(Collectors.joining());
+        NewDataSet rs = XmlUtil.xmlStringToObject(fileContent, typeReference);
+//        log.debug("log res getAccount: {}", rs.getTable1List().get(0).toString());
     }
 
 }

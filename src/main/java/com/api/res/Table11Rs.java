@@ -19,5 +19,4 @@ public class Table11Rs {
     @JsonProperty("Note")
     private String note;
 
-    
 }
