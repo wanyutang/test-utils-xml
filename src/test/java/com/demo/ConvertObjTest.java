@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
-import com.api.res.NewDataSet;
+import com.api.rs.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.api.ApiApplication;
-import com.api.res.Table11Rs;
 import com.api.util.XmlUtil;
 import com.fasterxml.jackson.core.type.TypeReference;
 import lombok.extern.slf4j.Slf4j;
@@ -28,21 +28,50 @@ public class ConvertObjTest {
 
     @Test
     public void xmlConvertObjTable1() throws IOException {
-        TypeReference<Table11Rs> typeReference = new TypeReference<Table11Rs>() {};
+        TypeReference<Table11> typeReference = new TypeReference<Table11>() {};
         String filePath = "./src/main/resources/xml-sample-Table1.txt";
         String fileContent = Files.lines(Paths.get(filePath)).collect(Collectors.joining());
-        Table11Rs rs = XmlUtil.xmlStringToObject(fileContent, typeReference);
+        Table11 rs = XmlUtil.xmlStringToObject(fileContent, typeReference);
         log.debug("log res getAccount: {}", rs.toString());
     }
 
-    
     @Test
-    public void xmlConvertObj() throws IOException {
-        TypeReference<NewDataSet> typeReference = new TypeReference<NewDataSet>() {};
-        String filePath = "./src/main/resources/xml-sample3.txt";
+    public void QryEditItemNewDataSet() throws IOException {
+        String filePath = "./src/main/resources/xml-sample2.txt";
         String fileContent = Files.lines(Paths.get(filePath)).collect(Collectors.joining());
-        NewDataSet rs = XmlUtil.xmlStringToObject(fileContent, typeReference);
-//        log.debug("log res getAccount: {}", rs.getTable1List().get(0).toString());
+        Diffgr<QryEditItemNewDataSet> diffgr = new Diffgr<QryEditItemNewDataSet>();
+        diffgr = XmlUtil.jsonToObject(fileContent, Diffgr.class);
+        log.debug("log res : {}", diffgr.getNewDataSet());
+    }
+
+
+    @Test
+    public void QryEditItemNewDataSet2XML() throws IOException {
+        Diffgr<QryEditItemNewDataSet> fakeData = new Diffgr<>();
+        fakeData.setNewDataSet(new QryEditItemNewDataSet() {{
+            setEditItemList(IntStream.range(0, 5).mapToObj(i -> new EditItem() {{
+                setPid("B12345678" + i);
+                setAccountPB("777200028951");
+                setAccountCK("777970012511");
+                setApplyDate("0109/03/1" + (i + 1));
+                setStatusAft("06");
+                setResCode("12");
+                setResCodeTwo("00");
+                setDescription("Sample Description " + i);
+                setAddImgA1("Y");
+                setAddImgA2("Y");
+                setAddImgB1("Y");
+                setAddImgB2("Y");
+                setName("Sample Name " + i);
+                setResidentAddress("Sample Resident Address " + i);
+                setCommAddress("Sample Comm Address " + i);
+                setCommPhone("Sample Comm Phone " + i);
+                setBirthCity("Sample Birth City " + i);
+                setWorkCompany("Sample Work Company " + i);
+                setOccupation("Sample Occupation " + i);
+            }}).collect(Collectors.toList()));
+        }});
+        log.debug("log res : {}", XmlUtil.objectToXml(fakeData));
     }
 
 }

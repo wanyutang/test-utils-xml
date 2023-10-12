@@ -1,11 +1,11 @@
-package com.api.res;
+package com.api.rs;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
 
 @Data
-public class Table11Rs {
+public class Table11 {
     
     @JsonProperty("Account")
     private String account;

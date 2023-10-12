@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-16"?>
-<diffgr:diffgram xmlns="http://tempuri.org/" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<NewDataSet xmlns=""><EditItem diffgr:id="EditItem1" msdata:rowOrder="0">
+<diffgr:diffgram xmlns="http://tempuri.org/" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><NewDataSet xmlns=""><EditItem diffgr:id="EditItem1" msdata:rowOrder="0">
 <PID>B123456780</PID><AccountPB/><AccountCK>777970000933</AccountCK><ApplyDate>0109/03/16</ApplyDate>
 <StatusAft>06</StatusAft><ResCode>12</ResCode><ResCodeTwo>00</ResCodeTwo><Description/><AddImgB1>Y</AddImgB1><AddImgB2>Y</AddImgB2>
 <Name/><ResidentAddress/><CommAddress/><CommPhone/><BirthCity/><workCompany/><Occupation/></EditItem>
@@ -35,4 +34,5 @@
 <EditItem diffgr:id="EditItem7" msdata:rowOrder="6"><PID>B123456780</PID><AccountPB>777200028951</AccountPB>
 <AccountCK>777970012511</AccountCK><ApplyDate>0112/03/22</ApplyDate><StatusAft>06</StatusAft><ResCode>32</ResCode>
 <ResCodeTwo>00</ResCodeTwo><Description/><Name/><ResidentAddress/><CommAddress/><CommPhone/><BirthCity/>
-<workCompany>要你管</workCompany><Occupation>030101</Occupation></EditItem></NewDataSet></diffgr:diffgram>
+<workCompany>要你管</workCompany><Occupation>030101</Occupation></EditItem></NewDataSet>
+</diffgr:diffgram>
